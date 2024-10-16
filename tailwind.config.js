@@ -8,7 +8,11 @@ export default {
     fontFamily :{
       sans : ["Quicksand", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'bg-primary': '#F2F6FE'
+      }
+    },
   },
   plugins: [],
 }

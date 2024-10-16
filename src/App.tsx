@@ -1,20 +1,23 @@
 import Navbar from "./components/Navbar/Navbar.tsx";
 import Header from "./components/Header/Header.tsx";
-import Dashboard from "./pages/Dashboard.tsx";
+import {BrowserRouter as Router} from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes.tsx";
 
 function App() {
 
 
     return (
-        <div className="flex min-h-screen">
-            <Navbar></Navbar>
-            <div className="w-full">
-                <Header></Header>
-                <div className="flex-grow bg-sky-950 bg-opacity-5 h-screen">
-                    <Dashboard></Dashboard>
+        <Router>
+            <div className="flex min-h-screen">
+                <Navbar/>
+                <div className="w-full">
+                    <Header/>
+                    <div className="flex-grow bg-bg-primary h-screen">
+                        <AppRoutes/>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Router>
     )
 }
 
