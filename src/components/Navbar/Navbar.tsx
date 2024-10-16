@@ -1,11 +1,11 @@
-import NavItem from "./navbar/NavItem.tsx";
-import mainLogo from "../assets/icons/main-logo.svg";
-import dashboardWhite from "../assets/icons/dashboard-white.svg";
-import dashboard from "../assets/icons/dashboard.svg";
-import entry from "../assets/icons/entry.svg";
-import report from "../assets/icons/report.svg";
-import setting from "../assets/icons/setting.svg";
-import account from "../assets/icons/account.svg";
+import NavItem from "./NavItem.tsx";
+import mainLogo from "../../assets/icons/main-logo.svg";
+import dashboardWhite from "../../assets/icons/dashboard-white.svg";
+import dashboard from "../../assets/icons/dashboard.svg";
+import entry from "../../assets/icons/entry.svg";
+import report from "../../assets/icons/report.svg";
+import setting from "../../assets/icons/setting.svg";
+import account from "../../assets/icons/account.svg";
 
 const Navbar = () => (
     <div className="top-0 left-0 text-left w-1/5 bg-white h-screen p-8">

@@ -1,4 +1,4 @@
-import defaultProfile from "../assets/image/default-profile.jpg"
+import defaultProfile from "../../assets/image/default-profile.jpg"
 
 const Header = () => {
     return (
