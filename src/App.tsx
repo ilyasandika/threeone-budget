@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/Navbar.tsx";
 import Header from "./components/Header/Header.tsx";
-import Dashboard from "./components/pages/Dashboard.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
 
 function App() {
 
