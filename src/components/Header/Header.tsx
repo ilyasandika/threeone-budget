@@ -2,7 +2,7 @@ import defaultProfile from "../../assets/image/default-profile.jpg"
 
 const Header = () => {
     return (
-	<div className="flex justify-between w-full bg-white border-b border-l py-4 px-10 items-center">
+	<div className="sticky top-0 z-10 flex justify-between w-full bg-white border-b  py-4 px-10 items-center">
 	    <span className="font-medium">Thursday, 20 June 2024, 11:41 WIB</span>
 	    <div className="flex items-center gap-4">
 		<div className="flex flex-col text-right">
