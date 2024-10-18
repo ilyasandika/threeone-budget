@@ -7,6 +7,7 @@ import report from "../../assets/icons/report.svg";
 import setting from "../../assets/icons/setting.svg";
 import account from "../../assets/icons/account.svg";
 import { useLocation } from "react-router-dom";
+import hamburgerClose from "../../assets/icons/hamburger-close.svg";
 
 interface NavbarProps {
     isOpen: boolean;
@@ -28,11 +29,15 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, openNavbar }) => {
 		className="text-right block xl:hidden w-full"
 		onClick={() => openNavbar(false)}
 	    >
-		X
+		<img
+		    src={hamburgerClose}
+		    alt="Hamburger Menu"
+		    className="inline xl:hidden font-medium w-4 cursor-pointer"
+		/>
 	    </button>
-	    <img alt="Main Logo" src={mainLogo} className="mx-auto mb-14 w-64" />
+	    <img alt="Main Logo" src={mainLogo} className="mx-auto mb-14 w-64"/>
 	    <div className="flex flex-col gap-3">
-		<NavItem onClick={()=>openNavbar(false)} to="/dashboard" activeImage={dashboardWhite} image={dashboard} title="Dashboard" active={isActive("dashboard")}/>
+		<NavItem onClick={() => openNavbar(false)} to="/dashboard" activeImage={dashboardWhite} image={dashboard} title="Dashboard" active={isActive("dashboard")}/>
 		<NavItem onClick={()=>openNavbar(false)} to="/entry" activeImage={dashboardWhite} image={entry} title="Entry" active={isActive("entry")} />
 		<NavItem onClick={()=>openNavbar(false)} to="/report" activeImage={dashboardWhite} image={report} title="Report" active={isActive("report")} />
 		<NavItem onClick={()=>openNavbar(false)} to="/setting" activeImage={dashboardWhite} image={setting} title="Setting" active={isActive("setting")} />

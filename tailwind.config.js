@@ -12,7 +12,10 @@ export default {
       colors: {
         'bg-primary': '#F2F6FE',
         'primary': '#227B94'
-      }
+      },
+      lineHeight: {
+        'fit': '0.5'
+      },
     },
   },
   plugins: [],
