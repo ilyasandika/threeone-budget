@@ -11,7 +11,9 @@ export default {
     extend: {
       colors: {
         'bg-primary': '#F2F6FE',
-        'primary': '#227B94'
+        'primary': '#227B94',
+        'secondary': '#FFDC7F',
+        'dark': '#273240'
       },
       lineHeight: {
         'fit': '0.5'

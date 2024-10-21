@@ -6,9 +6,10 @@ interface SummaryCardProps {
     value: number
     comparation: number
     basis: string
+    bgColor : "primary" | "secondary"
 }
 
-const SummaryCard: React.FC<SummaryCardProps> = ({icon, title, value, comparation, basis}) => {
+const SummaryCard: React.FC<SummaryCardProps> = ({icon, title, value, comparation, basis, bgColor}) => {
     const numberToRupiah = (number: number)=>{
 	return new Intl.NumberFormat("id-ID", {
 	    style: "currency",
@@ -19,7 +20,7 @@ const SummaryCard: React.FC<SummaryCardProps> = ({icon, title, value, comparatio
     return (
 	<div className={`flex items-center justify-between bg-white ${basis} rounded-lg h-full p-6`}>
 	    <div className="flex gap-5 items-center">
-		<div className="bg-primary p-2 rounded-lg h-20 w-16 text-center content-center">
+		<div className={`${bgColor == "primary" ? "bg-primary" : "bg-secondary"} p-2 rounded-lg h-20 w-16 text-center content-center`}>
 		    <img src={icon} alt="report" className="w-9 mx-auto"/>
 		</div>
 		<div className="flex flex-col text-left gap-2">
