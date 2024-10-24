@@ -3,14 +3,18 @@ import mainLogo from "../../assets/icons/main-logo.svg";
 import dashboardWhite from "../../assets/icons/dashboard-white.svg";
 import dashboard from "../../assets/icons/dashboard.svg";
 import entry from "../../assets/icons/entry.svg";
+import entryWhite from "../../assets/icons/entry-white.svg";
 import report from "../../assets/icons/report.svg";
+import reportWhite from "../../assets/icons/report-white.svg";
 import setting from "../../assets/icons/setting.svg";
+import settingWhite from "../../assets/icons/setting-white.svg";
 import account from "../../assets/icons/account.svg";
+import accountWhite from "../../assets/icons/account-white.svg";
 import { useLocation } from "react-router-dom";
 import hamburgerClose from "../../assets/icons/hamburger-close.svg";
 
 interface NavbarProps {
-    isOpen: boolean;
+    isOpen: boolean;	
     openNavbar: (value: boolean) => void;
 }
 
@@ -38,10 +42,10 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, openNavbar }) => {
 	    <img alt="Main Logo" src={mainLogo} className="mx-auto mb-14 w-64"/>
 	    <div className="flex flex-col gap-3">
 		<NavItem onClick={() => openNavbar(false)} to="/dashboard" activeImage={dashboardWhite} image={dashboard} title="Dashboard" active={isActive("dashboard")}/>
-		<NavItem onClick={()=>openNavbar(false)} to="/entry" activeImage={dashboardWhite} image={entry} title="Entry" active={isActive("entry")} />
-		<NavItem onClick={()=>openNavbar(false)} to="/report" activeImage={dashboardWhite} image={report} title="Report" active={isActive("report")} />
-		<NavItem onClick={()=>openNavbar(false)} to="/setting" activeImage={dashboardWhite} image={setting} title="Setting" active={isActive("setting")} />
-		<NavItem onClick={()=>openNavbar(false)} to="/account" activeImage={dashboardWhite} image={account} title="Account" active={isActive("account")} />
+		<NavItem onClick={()=>openNavbar(false)} to="/entry" activeImage={entryWhite} image={entry} title="Entry" active={isActive("entry")} />
+		<NavItem onClick={()=>openNavbar(false)} to="/report" activeImage={reportWhite} image={report} title="Report" active={isActive("report")} />
+		<NavItem onClick={()=>openNavbar(false)} to="/setting" activeImage={settingWhite} image={setting} title="Setting" active={isActive("setting")} />
+		<NavItem onClick={()=>openNavbar(false)} to="/account" activeImage={accountWhite} image={account} title="Account" active={isActive("account")} />
 	    </div>
 	</div>
     );

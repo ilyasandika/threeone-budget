@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Kitchen"
+  },
+  {
+    "id": 2,
+    "name": "Supplier Kitchen"
+  },
+  {
+    "id": 3,
+    "name": "Bar"
+  },
+  {
+    "id": 4,
+    "name": "Supplier Bar"
+  },
+  {
+    "id": 5,
+    "name": "Office"
+  },
+  {
+    "id": 6,
+    "name": "Cashier Waiter"
+  },
+  {
+    "id": 7,
+    "name": "Operational"
+  }
+]
