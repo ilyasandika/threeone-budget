@@ -7,7 +7,7 @@ import Chart from "../components/Chart/Chart";
 
 import MiniSummaryCard from "../components/Card/MiniSummaryCard.tsx";
 import {capitalizeWords, titleToImage} from "../helper/helper.tsx";
-import Dropdown from "../components/Dropdown/Dropdown.tsx";
+import Dropdown from "../components/Input/Dropdown.tsx";
 
 const Dashboard = () => {
 
@@ -43,7 +43,20 @@ const Dashboard = () => {
 		<Breadcrumb/>
 		<div className="flex items-center gap-4">
 		    <label htmlFor="rekap" className="font-semibold">Jenis rekap</label>
-		    <Dropdown items={['Harian', 'Bulanan', 'Tahunan']} placeholder={'Bulanan'}/>
+		    <Dropdown items={[
+			{
+			    id : 1,
+			    name : "Harian"
+			},
+			{
+			    id : 2,
+			    name : "Bulanan"
+			},
+			{
+			    id : 3,
+			    name : "Tahunan"
+			},
+		    ]} placeholder={'Bulanan'} onClick={()=>{}}/>
 		</div>
 	    </div>
 

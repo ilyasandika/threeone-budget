@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "departemen_id" : 1,
+    "name": "Gas"
+  },
+  {
+    "id": 2,
+    "departemen_id" : 1,
+    "name": "Telor"
+  },
+  {
+    "id": 3,
+    "departemen_id" : 2,
+    "name": "Veliya"
+  },
+  {
+    "id": 4,
+    "departemen_id" : 2,
+    "name": "Febri"
+  },
+  {
+    "id": 5,
+    "departemen_id" : 3,
+    "name": "Galon"
+  },
+  {
+    "id": 6,
+    "departemen_id" : 3,
+    "name": "Es Kristal"
+  },
+  {
+    "id": 7,
+    "departemen_id" : 4,
+    "name": "Masterista"
+  },
+  {
+    "id": 8,
+    "departemen_id" : 4,
+    "name": "Madun"
+  },
+  {
+    "id": 9,
+    "departemen_id" : 5,
+    "name": "Kertas"
+  },
+  {
+    "id": 10,
+    "departemen_id" : 5,
+    "name": "Pena"
+  },
+  {
+    "id": 11,
+    "departemen_id" : 6,
+    "name": "Air Mineral"
+  },
+  {
+    "id": 12,
+    "departemen_id" : 6,
+    "name": "Permen"
+  },
+  {
+    "id": 13,
+    "departemen_id" : 7,
+    "name": "Operational"
+  }
+]

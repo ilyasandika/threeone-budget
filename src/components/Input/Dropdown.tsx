@@ -1,11 +1,17 @@
 import { useState } from 'react';
 
-interface DropdownProps {
-    items: string[];
-    placeholder: string;
+interface Item {
+    id: number;
+    name: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({items, placeholder}) => {
+interface DropdownProps {
+    items: Item[];
+    placeholder: string;
+    onClick: (id: number, item: string) => void;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({items, placeholder, onClick}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
@@ -13,18 +19,22 @@ const Dropdown: React.FC<DropdownProps> = ({items, placeholder}) => {
 	setIsOpen(!isOpen);
     };
 
-    const handleSelectItem = (item: string) => {
+    const handleSelectItem = (id: number, item: string) => {
 	setSelectedItem(item);
+	onClick(id, item)
 	setIsOpen(false);
     };
 
     return (
-	<div className="relative inline-block text-left w-48">
+	<div className="relative inline-block text-sm text-left w-36">
 	    <button
 		onClick={toggleDropdown}
 		    className="w-full flex justify-between items-center border bg-white py-2 px-4 rounded-lg font-medium focus:outline-none"
 	    >
-		{selectedItem || placeholder}
+		<span className="truncate">
+		    {selectedItem || placeholder}
+		</span>
+
 		<svg
 		    className={`w-5 h-5 transition-transform ${
 			isOpen ? 'rotate-180' : 'rotate-0'
@@ -42,14 +52,14 @@ const Dropdown: React.FC<DropdownProps> = ({items, placeholder}) => {
 	    </button>
 
 	    {isOpen && (
-		<ul className="absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-md shadow z-10">
-		    {items.map((item: string, index: number) => (
+		<ul className="absolute left-0 mt-2 bg-white border rounded-lg shadow z-10">
+		    {items.map((item: Item, index: number) => (
 			<li
 			    key={index}
 			    className="cursor-pointer hover:bg-gray-100 px-4 py-2 font-medium"
-			    onClick={() => handleSelectItem(item)}
+			    onClick={() => handleSelectItem(item.id, item.name)}
 			>
-			    {item}
+			    {item.name}
 			</li>
 		    ))}
 		</ul>
